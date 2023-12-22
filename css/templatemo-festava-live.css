@@ -363,16 +363,19 @@ strong {
   top: 0;
   right: 0;
   left: 0;
-  margin-top: 51px;
+  height:116px;
 }
 
 .sticky-wrapper.is-sticky .navbar {
   background-color: var(--dark-color);
+  height:116px;
 }
 
 .navbar {
   background: transparent;
   z-index: 9;
+
+  height:116px;
 }
 
 .navbar-brand,
@@ -506,7 +509,6 @@ strong {
   ABOUT              
 -----------------------------------------*/
 .about-section {
-  background-image: url('../images/edward-unsplash-blur.jpg');
   background-color: #704010;
   background-repeat: no-repeat;
   background-size: cover;
@@ -517,6 +519,8 @@ strong {
   border-radius: var(--border-radius-medium);
   display: block;
 }
+
+
 
 .about-text-wrap {
   position: relative;

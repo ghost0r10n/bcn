@@ -21,6 +21,7 @@ https://templatemo.com/tm-583-festava-live
   --p-color:                      #717275;
   --border-color:                 #7fffd4;
   --link-hover-color:             #B22727;
+  --section-gradient: linear-gradient(to right, #ff7e5f, #feb47b)
 
   --body-font-family:             'Outfit', sans-serif;
 
@@ -47,6 +48,7 @@ body {
   background-color: var(--white-color);
   font-family: var(--body-font-family); 
 }
+
 
 
 /*---------------------------------------
@@ -218,7 +220,11 @@ strong {
 }
 
 .section-bg {
-  background-color: var(--section-bg-color);
+  
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(238,80,7,1) 100%);
+
+
 }
 
 .section-overlay {
@@ -481,10 +487,12 @@ strong {
   HERO        
 -----------------------------------------*/
 .hero-section {
+  
   position: relative;
   overflow: hidden;
   padding-top: 100px;
   height: calc(100vh - 51px);
+
 }
 
 .hero-section small {
@@ -517,6 +525,7 @@ strong {
   display: inline-flex;
   text-align: center;
 
+
 }
 
 #t1 {
@@ -531,7 +540,8 @@ strong {
   ABOUT              
 -----------------------------------------*/
 .about-section {
-  background-color: #704010;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 15%, #d74400 50%, #000000 94%);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -570,6 +580,10 @@ strong {
   left: 0;
   margin: 20px;
   padding: 35px;
+}
+
+#abt_bg {
+  background: var(--section-gradient);
 }
 
 
@@ -612,6 +626,12 @@ strong {
 /*---------------------------------------
   ARTISTS              
 -----------------------------------------*/
+.artists-section {
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 15%, #d74400 50%, #000000 94%);
+}
+
+
 .artists-thumb {
   position: relative;
   overflow: hidden;

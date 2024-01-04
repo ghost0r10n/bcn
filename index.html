@@ -119,10 +119,10 @@ https://templatemo.com/tm-583-festava-live
         <section class="about-section section-padding" id="section_2">
             <div class="container" id="abt_bg">
                 <div class="row">
-
-                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+        
+                    <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 d-flex align-items-center">
                         <div class="services-info">
-                            <h2 class="text-white mb-4">About Festava 2022</h2>
+                            <h2 class="text-white mb-4" id="about_h2">CHI SIAMO</h2>
 
                             <p class="text-white">Festava Live is free CSS template provided by TemplateMo website. This
                                 layout is built on Bootstrap v5.2.2 CSS library. You are free to use this template for
@@ -138,13 +138,45 @@ https://templatemo.com/tm-583-festava-live
                             <p class="text-white">Please tell your friends about our website. Thank you.</p>
                         </div>
                     </div>
-
+                    
                     <div class="col-lg-6 col-12">
-                        <div class="about-text-wrap">
-                            <img src="images/aboutimage.jpg" class="about-image img-fluid">
-
-                       </div>
+                        <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/carousel-inner/car1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/carousel-inner/car2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/carousel-inner/car3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/carousel-inner/car4.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/carousel-inner/car5.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/carousel-inner/car6.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/carousel-inner/car7.png" class="d-block w-100" alt="...">
+                                </div>
+                                <!-- Aggiungi altre immagini qui se necessario -->
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
+                    
+                    
 
                 </div>
             </div>
@@ -152,108 +184,38 @@ https://templatemo.com/tm-583-festava-live
 
 
         <section class="artists-section section-padding" id="section_3">
-            <div class="container">
+            <div class="container-fluids">
                 <div class="row justify-content-center">
 
                     <div class="col-12 text-center">
-                        <h2 class="mb-4">Meet Artists</h1>
+                        <h2 class=" text-center mb-4" id="sezioni_h2">SEZIONI</h1>
                     </div>
-
-                    <div class="col-lg-5 col-12">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg"
-                                    class="artists-image img-fluid">
+                    <div id="artistsCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Elemento Carousel 1 -->
+                            <div class="carousel-item active">
+                                <img src="images/games/arma.png" class="d-block w-100" alt="Image 1">
                             </div>
-
-                            <div class="artists-hover">
-                                <p>
-                                    <strong>Name:</strong>
-                                    Madona
-                                </p>
-
-                                <p>
-                                    <strong>Birthdate:</strong>
-                                    August 16, 1958
-                                </p>
-
-                                <p>
-                                    <strong>Music:</strong>
-                                    Pop, R&amp;B
-                                </p>
-
-                                <hr>
-
-                                <p class="mb-0">
-                                    <strong>Youtube Channel:</strong>
-                                    <a href="#">Madona Official</a>
-                                </p>
+                            <!-- Elemento Carousel 2 -->
+                            <div class="carousel-item">
+                                <img src="images/games/squad.jpg" class="d-block w-100" alt="Image 2">
                             </div>
+                            <!-- Elemento Carousel 3 -->
+                            <div class="carousel-item">
+                                <img src="images/games/ron.png" class="d-block w-100" alt="Image 3">
+                            </div>
+                            <!-- Altri elementi Carousel -->
                         </div>
+                        <!-- Controlli Carousel -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#artistsCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Precedente</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#artistsCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Successivo</span>
+                        </button>
                     </div>
-
-                    <div class="col-lg- col-12">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="images/artists/abstral-official-bdlMO9z5yco-unsplash.jpg"
-                                    class="artists-image img-fluid">
-                            </div>
-
-                            <div class="artists-hover">
-                                <p>
-                                    <strong>Name:</strong>
-                                    Rihana
-                                </p>
-
-                                <p>
-                                    <strong>Birthdate:</strong>
-                                    Feb 20, 1988
-                                </p>
-
-                                <p>
-                                    <strong>Music:</strong>
-                                    Country
-                                </p>
-
-                                <hr>
-
-                                <p class="mb-0">
-                                    <strong>Youtube Channel:</strong>
-                                    <a href="#">Rihana Official</a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="artists-thumb">
-                            <img src="images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg"
-                                class="artists-image img-fluid">
-
-                            <div class="artists-hover">
-                                <p>
-                                    <strong>Name:</strong>
-                                    Bruno Bros
-                                </p>
-
-                                <p>
-                                    <strong>Birthdate:</strong>
-                                    October 8, 1985
-                                </p>
-
-                                <p>
-                                    <strong>Music:</strong>
-                                    Pop
-                                </p>
-
-                                <hr>
-
-                                <p class="mb-0">
-                                    <strong>Youtube Channel:</strong>
-                                    <a href="#">Bruno Official</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>

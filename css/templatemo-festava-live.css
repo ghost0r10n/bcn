@@ -545,11 +545,13 @@ strong {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  justify-content: space-evenly;
 }
 
 .about-image {
   border-radius: var(--border-radius-medium);
   display: block;
+
 }
 
 
@@ -582,10 +584,45 @@ strong {
   padding: 35px;
 }
 
-#abt_bg {
-  background: var(--section-gradient);
+
+
+#about_h2{
+  color: var(--white-color);
+  font-weight: var(--font-weight-medium);
+  font-size: 1.5rem;
 }
 
+#aboutCarousel {
+  height: 300px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto; /* Adjust the height as needed */
+  object-fit: cover; /* This makes images cover the whole area */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000; /* Change color as needed */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #fff; /* Change color as needed */
+  border-radius: 50%;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
 
 /*---------------------------------------
   TICKET               
@@ -629,6 +666,7 @@ strong {
 .artists-section {
   background: rgb(0,0,0);
   background: linear-gradient(0deg, rgba(0,0,0,1) 15%, #d74400 50%, #000000 94%);
+  
 }
 
 
@@ -642,7 +680,12 @@ strong {
   border-radius: var(--border-radius-medium);
   display: block;
   width: 100%;
+  
 }
+
+.artists-image-wrap{
+ vertical-align: middle;
+} 
 
 .artists-thumb:hover .artists-hover {
   transform: translateY(0);
@@ -685,6 +728,53 @@ strong {
   margin: 1.5rem 0;
 }
 
+#sezioni_h2 {
+  color: var(--white-color);
+  font-weight: var(--font-weight-medium);
+}
+
+.artists-section .img-fluid {
+  width: 100%;      /* Larghezza massima */
+  height: auto;     /* Altezza automatica per mantenere le proporzioni */
+  object-fit: cover; /* Assicura che l'immagine copra l'intera area senza distorcersi */
+}
+
+#artistsCarousel {
+  width: 65%;
+  margin: auto;
+}
+
+#artistsCarousel .carousel-inner {
+  overflow: hidden; /* Nasconde gli elementi fuori dal contenitore */
+}
+
+#artistsCarousel .carousel-inner .carousel-item {
+  transition: transform 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 100%; /* Posizione iniziale fuori dallo schermo */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#artistsCarousel .carousel-inner .carousel-item.active {
+  transform: translateX(-100%); /* Sposta l'elemento attivo dentro il viewport */
+  z-index: 2; /* Assicura che l'immagine attiva sia sopra le altre */
+}
+
+#artistsCarousel .carousel-inner .carousel-item-next,
+#artistsCarousel .carousel-inner .carousel-item-prev {
+  transform: translateX(0); /* Sposta gli elementi successivo e precedente nella posizione normale */
+}
+
+#artistsCarousel .carousel-inner .carousel-item-next.active,
+#artistsCarousel .carousel-inner .carousel-item-prev.active {
+  transform: translateX(-100%); /* Garantisce che gli elementi attivi scorrono correttamente */
+}
 
 /*---------------------------------------
   SCHEDULE              

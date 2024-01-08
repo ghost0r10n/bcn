@@ -14,14 +14,12 @@ https://templatemo.com/tm-583-festava-live
   --white-color:                  #ffffff;
   --primary-color:                #F8CB2E;
   --secondary-color:              #EE5007;
-  --section-bg-color:             #f0f8ff;
   --custom-btn-bg-color:          #EE5007;
   --custom-btn-bg-hover-color:    #c01f27;
   --dark-color:                   #000000;
   --p-color:                      #717275;
   --border-color:                 #7fffd4;
   --link-hover-color:             #B22727;
-  --section-gradient: linear-gradient(to right, #ff7e5f, #feb47b)
 
   --body-font-family:             'Outfit', sans-serif;
 
@@ -45,11 +43,17 @@ https://templatemo.com/tm-583-festava-live
 }
 
 body {
-  background-color: var(--white-color);
   font-family: var(--body-font-family); 
+
+  background: linear-gradient(0deg, #000000 , #d74400 , #000000 75%);
 }
 
-
+.flexammelo{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+}
 
 /*---------------------------------------
   TYPOGRAPHY               
@@ -221,8 +225,6 @@ strong {
 
 .section-bg {
   
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(238,80,7,1) 100%);
 
 
 }
@@ -540,8 +542,7 @@ strong {
   ABOUT              
 -----------------------------------------*/
 .about-section {
-  background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 15%, #d74400 50%, #000000 94%);
+
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -663,11 +664,7 @@ strong {
 /*---------------------------------------
   ARTISTS              
 -----------------------------------------*/
-.artists-section {
-  background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 15%, #d74400 50%, #000000 94%);
-  
-}
+
 
 
 .artists-thumb {
@@ -779,13 +776,7 @@ strong {
 /*---------------------------------------
   SCHEDULE              
 -----------------------------------------*/
-.schedule-section {
-  background-image: url('../images/nainoa-shizuru-unsplash-blur.jpg');
-  background-color: #242424;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+
 .table-responsive {
 	filter: drop-shadow(2px 2px 4px #606060);
 }
@@ -960,14 +951,12 @@ strong {
   background-color: var(--dark-color);
   position: relative;
   overflow: hidden;
-  padding-bottom: 30px;
 }
 
 .site-footer-top {
-  background-color: var(--secondary-color);
+  background-color: var(--dark-color);
   background-image: url('../images/nainoa-shizuru-NcdG9mK3PBY-unsplash.jpg');
   background-repeat: no-repeat;
-  margin-bottom: 70px;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -1008,13 +997,30 @@ strong {
   margin: 0;
   padding: 0;
 }
-
+.social-icon-item-easter{
+  list-style: none;
+  
+  display: inline-block;
+  vertical-align: top;
+}
 .social-icon-item {
   list-style: none;
   display: inline-block;
   vertical-align: top;
 }
-
+.social-icon-link-easter {
+  background: var(--dark-color);
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-size: var(--copyright-font-size);
+  display: block;
+  margin-right: 10px;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 36px;
+  transition: background 0.2s, color 0.2s;
+}
 .social-icon-link {
   background: var(--secondary-color);
   border-radius: var(--border-radius-large);

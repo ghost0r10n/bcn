@@ -14,7 +14,6 @@ https://templatemo.com/tm-583-festava-live
   --white-color:                  #ffffff;
   --primary-color:                #F8CB2E;
   --secondary-color:              #EE5007;
-  --section-bg-color:             #f0f8ff;
   --custom-btn-bg-color:          #EE5007;
   --custom-btn-bg-hover-color:    #c01f27;
   --dark-color:                   #000000;
@@ -44,10 +43,17 @@ https://templatemo.com/tm-583-festava-live
 }
 
 body {
-  background-color: var(--white-color);
   font-family: var(--body-font-family); 
+
+  background: linear-gradient(0deg, #000000 , #d74400 , #000000 75%);
 }
 
+.flexammelo{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+}
 
 /*---------------------------------------
   TYPOGRAPHY               
@@ -218,7 +224,9 @@ strong {
 }
 
 .section-bg {
-  background-color: var(--section-bg-color);
+  
+
+
 }
 
 .section-overlay {
@@ -358,6 +366,9 @@ strong {
 /*---------------------------------------
   NAVIGATION              
 -----------------------------------------*/
+
+
+
 .sticky-wrapper {
   position: absolute;
   top: 0;
@@ -381,8 +392,9 @@ strong {
 .navbar-brand,
 .navbar-brand:hover {
   color: var(--white-color);
-  font-size: var(--h5-font-size);
-  font-weight: var(--font-weight-bold);
+  font-size: 20px;
+  font-weight: var(--font-weight-medium);
+  
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -477,10 +489,12 @@ strong {
   HERO        
 -----------------------------------------*/
 .hero-section {
+  
   position: relative;
   overflow: hidden;
   padding-top: 100px;
   height: calc(100vh - 51px);
+
 }
 
 .hero-section small {
@@ -504,20 +518,41 @@ strong {
   height: 100%;
 }
 
+#pitch-container {
+  display: flex;
+  margin-top: 25%;
+}
+
+#pitch {
+  display: inline-flex;
+  text-align: center;
+
+
+}
+
+#t1 {
+  color: #c7460a;
+}
+
+#t3 {
+  color: #c7460a ;
+}
 
 /*---------------------------------------
   ABOUT              
 -----------------------------------------*/
 .about-section {
-  background-color: #704010;
+
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  justify-content: space-evenly;
 }
 
 .about-image {
   border-radius: var(--border-radius-medium);
   display: block;
+
 }
 
 
@@ -550,6 +585,45 @@ strong {
   padding: 35px;
 }
 
+
+
+#about_h2{
+  color: var(--white-color);
+  font-weight: var(--font-weight-medium);
+  font-size: 1.5rem;
+}
+
+#aboutCarousel {
+  height: 300px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto; /* Adjust the height as needed */
+  object-fit: cover; /* This makes images cover the whole area */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000; /* Change color as needed */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #fff; /* Change color as needed */
+  border-radius: 50%;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
 
 /*---------------------------------------
   TICKET               
@@ -586,10 +660,16 @@ strong {
   height: 100%;
 }
 
-
+#cardiv {
+  display: flex;
+  align-items: center;
+}
 /*---------------------------------------
   ARTISTS              
 -----------------------------------------*/
+
+
+
 .artists-thumb {
   position: relative;
   overflow: hidden;
@@ -600,7 +680,12 @@ strong {
   border-radius: var(--border-radius-medium);
   display: block;
   width: 100%;
+  
 }
+
+.artists-image-wrap{
+ vertical-align: middle;
+} 
 
 .artists-thumb:hover .artists-hover {
   transform: translateY(0);
@@ -609,7 +694,7 @@ strong {
 
 .artists-hover {
   background-color: var(--primary-color);
-  background-color: rgba(248, 203, 46, 0.75);
+  background-color: rgba(0, 0, 0, 0.633);
   border-radius: var(--border-radius-medium);
   backdrop-filter: blur(5px) saturate(180%);
   -webkit-backdrop-filter: blur(5px) saturate(180%);
@@ -643,17 +728,58 @@ strong {
   margin: 1.5rem 0;
 }
 
+#sezioni_h2 {
+  color: var(--white-color);
+  font-weight: var(--font-weight-medium);
+}
+
+.artists-section .img-fluid {
+  width: 100%;      /* Larghezza massima */
+  height: auto;     /* Altezza automatica per mantenere le proporzioni */
+  object-fit: cover; /* Assicura che l'immagine copra l'intera area senza distorcersi */
+}
+
+#artistsCarousel {
+  width: 65%;
+  margin: auto;
+}
+
+#artistsCarousel .carousel-inner {
+  overflow: hidden; /* Nasconde gli elementi fuori dal contenitore */
+}
+
+#artistsCarousel .carousel-inner .carousel-item {
+  transition: transform 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 100%; /* Posizione iniziale fuori dallo schermo */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#artistsCarousel .carousel-inner .carousel-item.active {
+  transform: translateX(-100%); /* Sposta l'elemento attivo dentro il viewport */
+  z-index: 2; /* Assicura che l'immagine attiva sia sopra le altre */
+}
+
+#artistsCarousel .carousel-inner .carousel-item-next,
+#artistsCarousel .carousel-inner .carousel-item-prev {
+  transform: translateX(0); /* Sposta gli elementi successivo e precedente nella posizione normale */
+}
+
+#artistsCarousel .carousel-inner .carousel-item-next.active,
+#artistsCarousel .carousel-inner .carousel-item-prev.active {
+  transform: translateX(-100%); /* Garantisce che gli elementi attivi scorrono correttamente */
+}
 
 /*---------------------------------------
   SCHEDULE              
 -----------------------------------------*/
-.schedule-section {
-  background-image: url('../images/nainoa-shizuru-unsplash-blur.jpg');
-  background-color: #242424;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+
 .table-responsive {
 	filter: drop-shadow(2px 2px 4px #606060);
 }
@@ -828,14 +954,12 @@ strong {
   background-color: var(--dark-color);
   position: relative;
   overflow: hidden;
-  padding-bottom: 30px;
 }
 
 .site-footer-top {
-  background-color: var(--secondary-color);
+  background-color: var(--dark-color);
   background-image: url('../images/nainoa-shizuru-NcdG9mK3PBY-unsplash.jpg');
   background-repeat: no-repeat;
-  margin-bottom: 70px;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -876,13 +1000,30 @@ strong {
   margin: 0;
   padding: 0;
 }
-
+.social-icon-item-easter{
+  list-style: none;
+  
+  display: inline-block;
+  vertical-align: top;
+}
 .social-icon-item {
   list-style: none;
   display: inline-block;
   vertical-align: top;
 }
-
+.social-icon-link-easter {
+  background: var(--dark-color);
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-size: var(--copyright-font-size);
+  display: block;
+  margin-right: 10px;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 36px;
+  transition: background 0.2s, color 0.2s;
+}
 .social-icon-link {
   background: var(--secondary-color);
   border-radius: var(--border-radius-large);

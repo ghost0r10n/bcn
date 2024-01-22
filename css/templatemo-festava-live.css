@@ -107,9 +107,9 @@ p {
 }
 
 ul li {
-  color: var(--p-color);
-  font-size: var(--p-font-size);
-  font-weight: var(--font-weight-light);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: var(--font-weight-medium);
 }
 
 a, 
@@ -223,11 +223,7 @@ strong {
   padding-bottom: 100px;
 }
 
-.section-bg {
-  
 
-
-}
 
 .section-overlay {
   background-color: var(--dark-color);
@@ -601,9 +597,6 @@ strong {
   object-fit: cover;
 }
 
-#carouselExample{
-
-}
 
 .carousel-inner img {
   width: 100%;
@@ -730,52 +723,149 @@ strong {
 }
 /* Set-up */
 
-.container-flip{
-  margin: 0 auto;
-  border-radius:15px;
-  font-size:35px;
-}
-.cube {
-    margin: 0 auto;
-   display:inline-block;
-	width: 600px;
-	text-align: center;
-	height: 350px;
-	-webkit-transition: -webkit-transform .33s;
-	transition: transform .33s; /* Animate the transform properties */
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
+.container-sezioni {
+  display: flex;
 }
 
-.flip,.flop {
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-	height: 350px;
-  align-items:center;
-  text-align:center;
-  span {
-    width:100%;
-  }
+div.game-container {
+  margin: 10px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 550px;
+  /* for the image outside invisibility */
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  /* For the text defined in the image-container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 
-.flip {
-  background: #FCFFF5;
-	-webkit-transform: translateZ(175px);
-	transform: translateZ(175px);
+.game-image{
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all .3s;
 }
 
-.flop {
-  height:350px;
-  background: #91AA9D;
-	-webkit-transform: rotateX(-90deg) translateZ(-175px);
-	transform: rotateX(-90deg) translateZ(-175px);
+.first-line, .second-line, .third-line, .fourth-line {
+  position: absolute;
+  background-color: #fff;
+  transition: width .2s, height .2s;
+  z-index: 3;
+}
+
+.first-line {
+  left: 0;
+  top: 10px;
+  width: 0;
+  height: 2px;
+}
+
+.second-line {
+  right: 10px;
+  top: 0;
+  height: 0;
+  width: 2px;
+}
+
+.third-line {
+  right: 0;
+  bottom: 10px;
+  width: 0;
+  height: 2px;
+}
+
+.fourth-line {
+  bottom: 0;
+  left: 10px;
+  height: 0;
+  width: 2px;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:  absolute;
+  background-color: #000;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transition: all .3s;
+  z-index: 2;
+  color: white;
+}
+
+div.game-container:hover .first-line {
+  width: 100%;
+  transition-delay: 0;
+}
+
+div.game-container:hover .second-line {
+  height: 100%;
+  transition-delay: .2s;
+}
+
+div.game-container:hover .third-line {
+  width: 100%;
+  transition-delay: .4s;
+}
+
+div.game-container:hover .fourth-line {
+  height: 100%;
+  transition-delay: .6s;
+}
+
+div.game-container:hover img {
+  transform: scale(1.5);
+}
+
+div.game-container:hover .overlay {
+  opacity: .7;
+}
+
+div.game-container::before {
+  
+  position: absolute;
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all .3s;
+}
+
+div.game-container:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.requisiti-container {
+
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  
+
 
 }
 
-.cube:hover {
-	-webkit-transform: rotateX(90deg);
-	transform: rotateX(90deg);
+.requisiti{
+
+margin-bottom: 150px ;
+
 }
+
+
 .artists-hover p strong {
   color: var(--white-color);
   display: inline-block;

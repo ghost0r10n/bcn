@@ -479,7 +479,19 @@ strong {
 .navbar-toggler .navbar-toggler-icon::after {
   top: 8px;
 }
+.navbar-brand{
 
+	display:flex;
+}
+
+.navbar-brand p{
+	color:white;	
+	margin:auto;
+	font-size:1.5rem;
+}
+#logo-nav{
+	width:160px;
+}
 
 /*---------------------------------------
   HERO        
@@ -514,17 +526,18 @@ strong {
   height: 100%;
 }
 
-#pitch-container {
-  display: flex;
-  margin-top: 25%;
+.hero-section h1{
+	position:sticky; 
+	top:45%;
+	font-size:60pt;
 }
 
-#pitch {
-  display: inline-flex;
-  text-align: center;
-
+@media screen and (max-width: 300px) {
+	font-size: 2pt;
 
 }
+
+
 
 #t1 {
   color: #c7460a;
@@ -1115,7 +1128,6 @@ margin-bottom: 150px ;
 
 .site-footer-top {
   background-color: var(--dark-color);
-  background-image: url('../images/nainoa-shizuru-NcdG9mK3PBY-unsplash.jpg');
   background-repeat: no-repeat;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -1208,6 +1220,9 @@ margin-bottom: 150px ;
   animation: spinAround 2s linear infinite;
 }
 
+
+
+
 @keyframes spinAround {
   from {
     transform: rotate(0deg)
@@ -1267,6 +1282,7 @@ margin-bottom: 150px ;
     padding-top: 150px;
   }
 
+
   .pricing-thumb {
     padding: 35px;
   }
@@ -1301,6 +1317,30 @@ margin-bottom: 150px ;
 }
 
 @media screen and (max-width: 480px) {
+
+.hero-section h1{
+	position:sticky; 
+	top:43%;
+	font-size:20pt;
+}
+.navbar{
+	position:absolute;
+	top:0;
+}
+.navbar-brand{
+	width:80%;
+}
+
+.navbar-brand p{
+	display: none;
+	color:white;	
+	margin:auto;
+	font-size:7rem;
+}
+#logo-nav{
+	margin-left:47%;
+	width:100px;
+}
   h1 {
     font-size: 52px;
   }

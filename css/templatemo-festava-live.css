@@ -1517,4 +1517,10 @@ RESPONSIVE STYLES
 		opacity: 1;
 		margin-right: 0px;
 	}
+
+	#esferenx {
+		opacity: 1;
+		transform: scale(1);
+		margin-right: 0px;
+	}
 }

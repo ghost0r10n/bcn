@@ -55,6 +55,25 @@ body {
 	align-items: center;
 }
 
+#section_2 {
+	opacity: 0;
+	margin-right: 200px;
+	transition: 0.7s all;
+}
+
+#section_3 {
+	opacity: 0;
+	margin: 0px;
+	transition: 0.7s all;
+}
+
+
+#esferenx {
+	opacity: 0;
+	transform: scale(0.1);
+	transition: 0.7s all;
+}
+
 /*---------------------------------------
   TYPOGRAPHY               
 -----------------------------------------*/
@@ -280,6 +299,11 @@ strong {
 	margin-right: 15px;
 }
 
+
+.nav-item {
+	margin-left: 10px;
+}
+
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link:focus,
@@ -337,6 +361,7 @@ strong {
 
 .we-want-you {
 	display: block;
+	transform: translateY(-150px);
 }
 
 .navbar-expand-lg .navbar-nav .nav-link.custom-btn:hover,
@@ -410,7 +435,7 @@ strong {
 
 .navbar-expand-lg .navbar-nav .nav-link {
 	border-radius: var(--border-radius-large);
-	margin: 10px;
+	margin: 0px;
 	padding: 10px 20px;
 }
 
@@ -767,8 +792,10 @@ ARTISTS
 }
 
 div.game-container {
+	width: 90%;
+	padding: 10px;
 	margin: 10px;
-	width: 100%;
+
 	max-height: 550px;
 	/* for the image outside invisibility */
 	overflow: hidden;
@@ -776,15 +803,18 @@ div.game-container {
 	cursor: pointer;
 	/* For the text defined in the image-container */
 	display: flex;
+
+	border-radius: 10px;
 	justify-content: center;
 	align-items: center;
-	border-radius: 10px;
 }
 
 .game-image {
 	display: block;
 	width: 100%;
 	height: 100%;
+
+	border-radius: 10px;
 	transition: all .3s;
 }
 
@@ -891,7 +921,7 @@ div.game-container:hover::before {
 
 .sbididi {
 	position: absolute;
-	z-index: 99999999999;
+	z-index: 8;
 	color: white;
 	right: 0;
 	bottom: 0;
@@ -928,6 +958,10 @@ div.game-container:hover::before {
 
 }
 
+video {
+	object-fit: cover;
+}
+
 .requisiti {
 
 	margin-bottom: 150px;
@@ -957,6 +991,12 @@ div.game-container:hover::before {
 #sezioni_h2 {
 	color: var(--white-color);
 	font-weight: var(--font-weight-medium);
+}
+
+.artists-section {
+
+	padding-right: 100px;
+	padding-left: 100px;
 }
 
 .artists-section .img-fluid {
@@ -1289,6 +1329,12 @@ SOCIAL ICON
 	animation: spinAround 2s linear infinite;
 }
 
+.headline-sezioni {
+	color: white;
+	width: 100%;
+
+}
+
 
 
 
@@ -1391,7 +1437,17 @@ RESPONSIVE STYLES
 	.hero-section h1 {
 		position: sticky;
 		top: 43%;
-		font-size: 20pt;
+		font-size: 18pt;
+	}
+
+	.navbar {
+
+		height: 80px;
+	}
+
+	.artists-section {
+		padding-right: 20px;
+		padding-left: 20px;
 	}
 
 	.navbar-brand {
@@ -1410,8 +1466,10 @@ RESPONSIVE STYLES
 	}
 
 	#logo-nav {
-		margin-left: 47%;
-		width: 100px;
+		position: absolute;
+		top: 10px;
+		left: calc(50vw - 80px);
+
 	}
 
 	.requisiti {
@@ -1419,6 +1477,16 @@ RESPONSIVE STYLES
 		margin-bottom: 150px;
 		padding: 5px;
 
+	}
+
+	.container-sezioni {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.game-container {
+
+		height: 250px;
 	}
 
 	h1 {
@@ -1439,5 +1507,15 @@ RESPONSIVE STYLES
 
 	h5 {
 		font-size: 20px;
+	}
+
+	#section_3 {
+		opacity: 1;
+		margin-right: 0px;
+	}
+
+	#section_2 {
+		opacity: 1;
+		margin-right: 0px;
 	}
 }

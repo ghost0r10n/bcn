@@ -91,12 +91,21 @@ https://templatemo.com/tm-583-festava-live
 						loop muted>
 						<source src="video/video.mp4" type="video/mp4">
 				</div>
-				<div style="height: 100vh; text-align: center; ">
+				<div style="height: 100vh; text-align: center;  ">
 					<div id="pitch" style="height:100vh">
 						<h1>
-							<font id="t1">MILSIM</font> - <font id="t2" class="text-white">
-								TACTICAL
-							</font> - <font id="t3">TEAMPLAY</font>
+							<marquee>
+								<font id="t1">MILSIM</font>
+							</marquee><br>
+							<marquee direction="right">
+								<font id="t2" class="text-white">
+									TACTICAL
+								</font>
+							</marquee><br>
+							<marquee scrollamount="10">
+								<font id="t3">
+									TEAMPLAY</font>
+							</marquee>
 						</h1>
 
 					</div>
@@ -370,7 +379,6 @@ T e m p l a t e M o
 			elementIds.forEach(function (id) {
 				var element = document.getElementById(id);
 				if (isInViewport(element)) {
-					console.log("afjl;skdfal;ksj")
 					element.style.opacity = 1;
 					element.style.transform = 'scale(1)'
 					element.style.margin = "0px";
